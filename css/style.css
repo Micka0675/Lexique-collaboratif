@@ -62,6 +62,9 @@ header{
 .col-right{
     position: relative;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .col-left p, .col-right p{
