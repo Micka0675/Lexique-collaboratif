@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+:root{
+    --primary-color:rgb(37, 52, 121);
+    --secondary-color:white;
+    --third-color:rgb(7, 7, 7);
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* global flexbox */
+
+header,footer,.main,.col-left,.col-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    height: 100px;
+    
+}
+
+.main{
+    min-height: 80vh;
+    background-color: var(--third-color);
+}
+
+.tabline{
+    width: 95%;
+    height: 80px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.col-left,.col-right{
+    background-color: var(--third-color);
+    width: 49.9%;
+    height: 78px;
+    
+}
+
+.col-right{
+    position: relative;
+    overflow-y: scroll;
+}
+
+.col-left p, .col-right p{
+    background-color: var(--third-color);
+    color:var(--secondary-color)
+}
+
+footer{
+    min-height: calc(100vh - 80vh - 100px);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
