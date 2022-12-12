@@ -17,7 +17,7 @@
 
 /* global flexbox */
 
-header,footer,.main,.col-left,.col-right{
+header,footer,.col-left,.col-right{
     display: flex;
     justify-content: center;
     align-items: center;
