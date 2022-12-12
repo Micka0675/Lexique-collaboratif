@@ -54,8 +54,11 @@ header{
 
 .col-left,.col-right{
     background-color: var(--third-color);
-    width: 49.9%;
     height: 78px;
+}
+
+.col-left{
+    width: 24.9%;
     
 }
 
@@ -65,11 +68,18 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 74.9%;
 }
 
 .col-left p, .col-right p{
     background-color: var(--third-color);
-    color:var(--secondary-color)
+    color:var(--secondary-color);
+    width: 95%;
+}
+
+.col-left p{
+    text-align: center;
 }
 
 footer{
