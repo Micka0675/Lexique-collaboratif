@@ -5,6 +5,7 @@
     --primary-color:rgb(37, 52, 121);
     --secondary-color:white;
     --third-color:rgb(7, 7, 7);
+    --darker-color:rgb(14, 25, 63);
 }
 
 *{
@@ -15,8 +16,13 @@
     list-style: none;
 }
 
+h1{
+    text-align: center;
+}
+
 h2{
     font-size: 29px;
+    text-align: center;
 }
 
 
@@ -55,38 +61,37 @@ header{
 
 .tabline{
     width: 95%;
-    height: 80px;
-    background-color: var(--primary-color);
+    min-height: 80px;
+    background-color: var(--third-color);
+    border: solid var(--darker-color) 2px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
+    margin-bottom: 5px;
 }
 
 .col-left,.col-right{
-    background-color: var(--third-color);
-    height: 78px;
+    height: 100%;
 }
 
 .col-left{
-    width: 24.9%;
-    
+    width: 25%;
 }
 
 .col-right{
     position: relative;
-    overflow-y: scroll;
+    overflow-y: visible;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 74.9%;
+    width: 75%;
 }
 
 .col-left p, .col-right p{
-    background-color: var(--third-color);
     color:var(--secondary-color);
     width: 95%;
+    height: 100%;
 }
 
 .col-left p{
@@ -94,7 +99,26 @@ header{
 }
 
 footer{
-    min-height: calc(100vh - 80vh - 100px);
+    height: calc(100vh - 80vh - 100px);
     background-color: var(--primary-color);
     color: var(--secondary-color);
+}
+
+
+@media screen and (max-width : 370px)
+{
+    h1, h2{
+        font-size: 20px;
+    }
+    .main p{
+        font-size: 12px;
+    }
+
+    .col-left{
+        width: 35%;
+    }
+
+    .col-right{
+        width: 65%;
+    }
 }
