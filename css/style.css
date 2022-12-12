@@ -23,6 +23,12 @@ header,footer,.main,.col-left,.col-right{
     align-items: center;
 }
 
+.main{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-direction:column
+
 
 header{
     background-color: var(--primary-color);
