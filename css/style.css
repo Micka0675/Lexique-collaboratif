@@ -15,6 +15,9 @@
     text-decoration: none;
     list-style: none;
 }
+body{
+    background-color: var(--third-color);
+}
 
 h1{
     text-align: center;
@@ -47,6 +50,7 @@ header,footer,.col-left,.col-right{
     flex-direction:column;
     min-height: 80vh;
     background-color: var(--third-color);
+    margin-bottom: 50px;
 }
 
 header{
