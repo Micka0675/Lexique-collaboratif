@@ -25,6 +25,12 @@ h2{
     text-align: center;
 }
 
+ul,li{
+    color: var(--secondary-color);
+    text-align: left;
+    width: 92%;
+    list-style-type: disc;
+}
 
 /* global flexbox */
 
