@@ -27,6 +27,7 @@ h1{
 h2{
     font-size: 29px;
     text-align: center;
+    color: wheat;
 }
 
 ul,li{
@@ -63,6 +64,15 @@ footer p{
     align-items: center ;
 }
 
+.strong{
+    font-weight: bolder;
+    color: wheat;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .navbar{
     display: flex;
     justify-content: space-evenly;
@@ -76,7 +86,9 @@ footer p{
     color: white;
     font-weight: bold;
     text-decoration: underline;
-    text-align: center;
+    width:300px;
+    display: flex;
+    justify-content: center;
 }
 
 .main{
@@ -89,10 +101,58 @@ footer p{
     margin-bottom: 50px;
 }
 
+
+
+.mainIndex{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    min-height: 80vh;
+    background-color: var(--third-color);
+    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.mainIndex a{
+    color:wheat;
+    font-style: italic;
+
+}
+
+.mainIndex p,.mainIndex li,.mainIndex h2
+{
+    height: 50px;
+}
+
+.mainIndex ul{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainIndex li{
+    list-style-type: decimal;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.important-title{
+    font-size: 25px;
+}
+
 .welcome{
     text-align: center;
     width: 90%;
-
+    margin-bottom: 70px;
 }
 
 .welcome{
@@ -155,15 +215,35 @@ footer{
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
+@media screen and (max-width:900px)
+{
+    .navbar a{
+        width: 33,33%;
+        font-size: 12px;
+    }
+}
 
 @media screen and (max-width : 514px)
 {
     h1{
         font-size: 23px;
     }
+
+    .mainIndex ul,.strong{
+        width: 90%;
+    }
+
+    .strong{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .each-modif li,.mainIndex p{
+        height:130px;
+    }
 }
 
-@media screen and (max-width : 370px)
+@media screen and (max-width : 400px)
 {
     header{
         height:400px;
@@ -172,12 +252,16 @@ footer{
 
     header:first-child{
         height: 200px;
-        
+        justify-content: center;
     }
 
-    h1, h2{
-        font-size: 20px;
+    h1{
         color: white;
+    }
+
+    h1, h2,.strong{
+        font-size: 20px;
+        
         width: 90%;
         margin: auto;
     }
