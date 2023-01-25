@@ -243,7 +243,7 @@ footer{
     }
 }
 
-@media screen and (max-width : 370px)
+@media screen and (max-width : 400px)
 {
     header{
         height:400px;
@@ -255,9 +255,13 @@ footer{
         justify-content: center;
     }
 
-    h1, h2{
-        font-size: 20px;
+    h1{
         color: white;
+    }
+
+    h1, h2,.strong{
+        font-size: 20px;
+        
         width: 90%;
         margin: auto;
     }
