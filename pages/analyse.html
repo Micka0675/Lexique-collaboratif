@@ -27,7 +27,7 @@
                 <p>Dictionnaire de données</p>
             </div>
             <div class="col-right">
-                <p>Un dictionnaire de données permet de répertorier l'ensemble des informations concernant l'application.</p>
+                <p>Un dictionnaire de données permet de répertorier les informations constituant l'application en données indivisibles. Ces dernières sont nommées, décrites, typées et regroupées en entités. Y figurent également les contraintes et certaines règles de calcul</p>
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
@@ -37,7 +37,7 @@
                 <p>Modèle Conceptuel de données (MCD)</p>
             </div>
             <div class="col-right">
-                <p>C'est une représentation de l'ensemble des informations ordonnées et mises en relation entre elles.</p>
+                <p>Le MCD est un schéma représentant l'ensemble des données ordonnées en entité constituée d'attributs, caractérisée par une référence unique et mise en relation avec les autres entités. Ces relations peuvent s'illustrer par des verbes, voire des attributs et se lisent par le biais de cardinalités.</p>
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
@@ -47,7 +47,13 @@
                 <p>Modèle Physique de données (MPD)</p>
             </div>
             <div class="col-right">
-                <p>C'est une representation de l'ensemble des informations ordonnées et mises en relation entre elles dans le but de pouvoir les stocker.</p>
+                <p>Le MPD est le schéma résultant du MCD suite à l'application des règles suivantes : 
+                    <ul>
+                        <li>Les références uniques se transforment en clés primaires et d'autres contraintes telles que la nullabilité et l'auto-incrément peuvent y figurer</li>
+                        <li>Pour les relations <strong>many to one</strong>, la clé primaire de l'entité forte (many) est reportée dans l'entité faible (one) sous forme de clé étrangère. Les attributs de la relation se reportent également dans l'entité faible.</li>
+                        <li>Les relations <strong>many to many</strong>, se traduisent par la création d'une table d'association. Sa clé primaire est la concaténation des clés étrangères la reliant aux entités d'origines. Elle reprend les attributs de la relation.</li>
+                    </ul>
+                </p>
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
