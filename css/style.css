@@ -27,6 +27,7 @@ h1{
 h2{
     font-size: 29px;
     text-align: center;
+    color: wheat;
 }
 
 ul,li{
@@ -63,6 +64,15 @@ footer p{
     align-items: center ;
 }
 
+.strong{
+    font-weight: bolder;
+    color: wheat;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .navbar{
     display: flex;
     justify-content: space-evenly;
@@ -87,6 +97,54 @@ footer p{
     min-height: 80vh;
     background-color: var(--third-color);
     margin-bottom: 50px;
+}
+
+
+
+.mainIndex{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    min-height: 80vh;
+    background-color: var(--third-color);
+    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.mainIndex a{
+    color:wheat;
+    font-style: italic;
+
+}
+
+.mainIndex p,.mainIndex li,.mainIndex h2
+{
+    height: 50px;
+}
+
+.mainIndex ul{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainIndex li{
+    list-style-type: decimal;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.important-title{
+    font-size: 25px;
 }
 
 .welcome{
