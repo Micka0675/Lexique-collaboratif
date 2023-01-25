@@ -21,6 +21,7 @@ body{
 
 h1{
     text-align: center;
+    color: white;
 }
 
 h2{
@@ -35,12 +36,47 @@ ul,li{
     list-style-type: disc;
 }
 
+header{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    height: 100px;
+}
+
+header a{
+    display: flex;
+    align-items: center;
+    height: 70%;
+    text-decoration: none;
+}
 /* global flexbox */
 
 header,footer,.col-left,.col-right{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+}
+
+footer p{
+    height: 100%;
+    display: flex;
+    align-items: center ;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    background-color: rgb(39, 39, 39);
+}
+
+.navbar a{
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
 }
 
 .main{
@@ -53,11 +89,15 @@ header,footer,.col-left,.col-right{
     margin-bottom: 50px;
 }
 
-header{
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    height: 100px;
-    
+.welcome{
+    text-align: center;
+    width: 90%;
+
+}
+
+.welcome{
+    color: white;
+
 }
 
 .category{
@@ -111,16 +151,35 @@ header{
 }
 
 footer{
-    height: calc(100vh - 80vh - 100px);
+    height: calc(100vh - 80vh - 130px);
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
 
+@media screen and (max-width : 514px)
+{
+    h1{
+        font-size: 23px;
+    }
+}
 
 @media screen and (max-width : 370px)
 {
+    header{
+        height:400px;
+        align-items: center;
+    }
+
+    header:first-child{
+        height: 200px;
+        
+    }
+
     h1, h2{
         font-size: 20px;
+        color: white;
+        width: 90%;
+        margin: auto;
     }
     .main p{
         font-size: 12px;
@@ -132,5 +191,15 @@ footer{
 
     .col-right{
         width: 65%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        height: 200px;
+    }
+
+    footer{
+        height: calc(100vh - 70vh - 400px);
+        background-color: var(--primary-color);
     }
 }
