@@ -47,7 +47,11 @@
                 <p>Modèle Physique de données (MPD)</p>
             </div>
             <div class="col-right">
-                <p>C'est une representation de l'ensemble des informations ordonnées et mises en relation entre elles dans le but de pouvoir les stocker.</p>
+                <p>Le MPD est le schéma résultant du MCD suite à l'application des règles suivantes : 
+                        -Les références uniques se transforment en clés primaires et d'autres contraintes telles que la nullabilité et l'auto-incrément peuvent y figurer
+                        -Pour les relations <strong>many to one</strong>, la clé primaire de l'entité forte (many) est reportée dans l'entité faible (one) sous forme de clé étrangère. Les attributs de la relation se reportent également dans l'entité faible.
+                        -Les relations <strong>many to many</strong>, se traduisent par la création d'une table d'association. Sa clé primaire est la concaténation des clés étrangères la reliant aux entités d'origines. Elle reprend les attributs de la relation.
+                </p>
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
