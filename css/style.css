@@ -86,7 +86,9 @@ footer p{
     color: white;
     font-weight: bold;
     text-decoration: underline;
-    text-align: center;
+    width:300px;
+    display: flex;
+    justify-content: center;
 }
 
 .main{
@@ -150,7 +152,7 @@ footer p{
 .welcome{
     text-align: center;
     width: 90%;
-
+    margin-bottom: 70px;
 }
 
 .welcome{
@@ -213,11 +215,31 @@ footer{
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
+@media screen and (max-width:900px)
+{
+    .navbar a{
+        width: 33,33%;
+        font-size: 12px;
+    }
+}
 
 @media screen and (max-width : 514px)
 {
     h1{
         font-size: 23px;
+    }
+
+    .mainIndex ul,.strong{
+        width: 90%;
+    }
+
+    .strong{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .each-modif li,.mainIndex p{
+        height:130px;
     }
 }
 
@@ -230,7 +252,7 @@ footer{
 
     header:first-child{
         height: 200px;
-        
+        justify-content: center;
     }
 
     h1, h2{
