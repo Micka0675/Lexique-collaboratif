@@ -34,9 +34,6 @@ a{
     color: white;
 }
 
-a:{
-    color: aliceblue;
-}
 
 ul,li{
     color: var(--secondary-color);
