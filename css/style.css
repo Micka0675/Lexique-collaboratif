@@ -30,6 +30,11 @@ h2{
     color: wheat;
 }
 
+a{
+    color: white;
+}
+
+
 ul,li{
     color: var(--secondary-color);
     text-align: left;
