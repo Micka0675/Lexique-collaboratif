@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-
+/* Global Rules */
 :root{
     --primary-color:rgb(34, 36, 91);
     /* Ancienne couleur header : rgb(37, 52, 121)*/
@@ -46,7 +46,7 @@ ul,li{
 header{
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    height: 100px;
+    height:200px;
 }
 
 .logoPromo
@@ -58,7 +58,7 @@ header{
 header a{
     display: flex;
     align-items: center;
-    height: 70%;
+    height: 50%;
     text-decoration: none;
 }
 /* global flexbox */
@@ -70,13 +70,104 @@ header,footer,.col-left{
     align-items: center;
 }
 
+/* footer */
+
+footer{
+    height: calc(100vh - 80vh - 200px);
+    min-height: 70px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
 footer p{
     height: 100%;
     display: flex;
     align-items: center ;
 }
 
+/* navbar */
+
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    background-color: rgb(39, 39, 39);
+}
+
+.navbar a{
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-decoration: underline;
+    width:300px;
+    display: flex;
+    justify-content: center;
+}
+
+/* search bloc */
+
+.searchbar{
+    width: 250px;
+    height: 28px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.searchbar input{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    width: 170px;
+    border: none;
+    margin-bottom: 5px;
+}
+
+.searchbar input::placeholder{
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+.searchbar input:focus{
+    outline: none;
+}
+
+.searchbar i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
 .fa-magnifying-glass{
+    cursor: pointer;
+}
+
+/* input valid search after */
+.boxValid{
+    width: 95%;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.boxValid p{
+    color: var(--secondary-color);
+}
+
+.valid-def{
+    width: 70px;
+    height: 28px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: solid var(--secondary-color) 1px;
+    border-radius: 15px;
     cursor: pointer;
 }
 
@@ -89,23 +180,9 @@ footer p{
     align-items: center;
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 30%;
-    background-color: rgb(39, 39, 39);
-}
 
-.navbar a{
-    color: white;
-    font-weight: bold;
-    text-decoration: underline;
-    width:300px;
-    display: flex;
-    justify-content: center;
-}
+
+/* main */
 
 .main{
     display:flex;
@@ -161,6 +238,8 @@ footer p{
     align-items: center;
 }
 
+/* home */
+
 .important-title{
     font-size: 25px;
 }
@@ -199,6 +278,7 @@ footer p{
     margin-bottom: 5px;
     padding-top: 15px;
     padding-bottom: 15px;
+    position: relative;
 }
 
 .col-left,.col-right{
@@ -236,11 +316,11 @@ footer p{
     margin-top: 15px;
 }
 
-footer{
-    height: calc(100vh - 80vh - 130px);
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
+
+
+/* media queries  */
+
+
 @media screen and (max-width:900px)
 {
     .navbar a{

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Phoenix Lexique</title>
 </head>
 <body>
@@ -23,13 +24,16 @@
             <a href="../pages/sql.html">T-Sql</a>
             <a href="../pages/annexes.html">Annexes</a>
         </div>
+        <div class="searchbar" id="boxSearch">
+            <input type="text" placeholder="Rechercher une definition" id="searchBar"><i class="fa-sharp fa-solid fa-magnifying-glass" id="startResearch"></i>
+        </div>
     </header>
-    <div class="main">
+    <div class="main" id="main">
         <div class="category"><h2>Algorithmie</h2></div>
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Algorithme</p>
+                <p class="definition">Algorithme</p>
             </div>
             <div class="col-right">
                 <p>Un algorithme est une suite d'instructions logiques qui, pour résoudre un problème donné, va intégrer les notions d'entrées et de sorties afin de résoudre le dit problème.</p>
@@ -39,7 +43,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Fonction</p>
+                <p class="definition">Fonction</p>
             </div>
             <div class="col-right">
                 <p>Une fonction regroupe une suite d'instructions permettant d'automatiser une opération. Elle est nommée conformément à la convention de nommage choisie et s'inscrit dans les bonnes pratiques de maintenance et de lisibilité du code. Elle peut opérer sur des <strong>paramètres</strong> ou des <strong>arguments</strong> et et le type du résultat attendu peut être précisé. La portée des variables y est limitées; c'est pourquoi leur valeur doit être retournée pour être utilisée dans le reste du programme.</p>
@@ -49,7 +53,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Paramètres ou arguments</p>
+                <p class="definition">Paramètres ou arguments</p>
             </div>
             <div class="col-right">
                 <p>Le paramètre d'une fonction a le rôle de variable locale à la fonction. Il est déclaré en même temps que la fonction (entre parenthèses) et sa valeur est affectée dans le programme avant l'appel de la fonction.</p>
@@ -59,7 +63,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>IDE</p>
+                <p class="definition">IDE</p>
             </div>
             <div class="col-right">
                 <p>Un IDE (integrated development environment) est un logiciel de création d'applications, qui rassemble des outils de développement fréquemment utilisés dans une seule interface utilisateur graphique.</p>
@@ -69,7 +73,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Programme</p>
+                <p class="definition">Programme</p>
             </div>
             <div class="col-right">
                 <p>Un programme est une succession d'algorithmes.</p>
@@ -79,7 +83,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Pas à pas</p>
+                <p class="definition">Pas à pas</p>
             </div>
             <div class="col-right">
                 <p>Le pas à pas est un outil qui permet de débugger son code en l'exécutant instruction par instruction, jusqu'à isoler la cause du problème. Des <strong>points d'arrêts</strong> sont placés à des endroits spécifique du programme afin d'en suspendre l'exécution, ce qui permet par exemple de vérifier les valeurs des variables.</p>
@@ -92,5 +96,6 @@
     <footer>
         <p>The Phoenix Team, 2022</p>
     </footer>
+    <script src ="../js/script.js"></script>
 </body>
 </html>
