@@ -69,6 +69,10 @@ footer p{
     align-items: center ;
 }
 
+.fa-magnifying-glass{
+    cursor: pointer;
+}
+
 .strong{
     font-weight: bolder;
     color: wheat;

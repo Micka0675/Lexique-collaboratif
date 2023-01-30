@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Phoenix Lexique</title>
 </head>
 <body>
@@ -19,13 +20,16 @@
             <a href="../pages/sql.html">T-Sql</a>
             <a href="../pages/annexes.html">Annexes</a>
         </div>
+        <div class="searchbar">
+            <input type="text" placeholder="Rechercher une definition" id="searchBar"><i class="fa-sharp fa-solid fa-magnifying-glass" id="startResearch"></i>
+        </div>
     </header>
     <div class="main">
         <div class="category"><h2>Transact-SQl</h2></div>
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>SQL</p>
+                <p class="definition">SQL</p>
             </div>
             <div class="col-right">
                 <p>SQL (sigle de Structured Query Language, en français langage de requête structurée) est un langage informatique normalisé servant à exploiter des bases de données relationnelles. La partie langage de manipulation des données de SQL permet de rechercher, d'ajouter, de modifier ou de supprimer des données dans les bases de données relationnelles.</p>
@@ -35,7 +39,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>CRUD</p>
+                <p class="definition">CRUD</p>
             </div>
             <div class="col-right">
                 <p>CRUD (create, read, update, delete) (créer, lire, mettre à jour, supprimer) est un acronyme pour les façons dont on peut fonctionner sur des données stockées. C'est un moyen mnémotechnique pour les quatre fonctions de base du stockage persistant.</p>
@@ -45,7 +49,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>REQUETE</p>
+                <p class="definition">REQUETE</p>
             </div>
             <div class="col-right">
                 <p>Une requete est une instruction qui permet de gérer les données de la base de données.</p>
@@ -55,7 +59,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>STRUCTURE DE REQUETE</p>
+                <p class="definition">STRUCTURE DE REQUETE</p>
             </div>
             <div class="col-right">
                 <p>Une requete se structure dans un ordre précis:</p>
@@ -73,7 +77,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>CREATE</p>
+                <p class="definition">CREATE</p>
             </div>
             <div class="col-right">
                 <p>CREATE est la commande qui permet de creer des elements de structure de base de données comme des tables ou des bases de données.</p>
@@ -84,7 +88,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>SELECT</p>
+                <p class="definition">SELECT</p>
             </div>
             <div class="col-right">
                 <p>SELECT (READ) est la commande qui permet d'afficher des données dans une base de données.</p>
@@ -95,7 +99,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>UPDATE</p>
+                <p class="definition">UPDATE</p>
             </div>
             <div class="col-right">
                 <p>UPDATE est la commande qui permet de modifier des données dans une base de données.</p>
@@ -106,7 +110,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>DELETE</p>
+                <p class="definition">DELETE</p>
             </div>
             <div class="col-right">
                 <p>DELETE est la commande qui permet de supprimer des données dans une base de données.</p>
@@ -117,7 +121,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>FONCTION D'AGREGATION</p>
+                <p class="definition">FONCTION D'AGREGATION</p>
             </div>
             <div class="col-right">
                 <p>Une fonction d'agrégation est une operation dans une requete permettant de calculer un resultat sur les données d'une colonne en fonction de parametres definis.
@@ -130,7 +134,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>CONDITION (WHERE)</p>
+                <p class="definition">CONDITION (WHERE)</p>
             </div>
             <div class="col-right">
                 <p>La condition est utilisée pour filtrer les resultats de requete. Dans cet exemple elle permet de selectionner des informations relatives a un vehicule en fonction de sa plaque d'immatriculation.
@@ -142,7 +146,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>GROUP BY()</p>
+                <p class="definition">GROUP BY()</p>
             </div>
             <div class="col-right">
                 <p>Pour repertorier les resultats d'une colonne en fonction d'une autre, il faut utiliser GROUP BY().
@@ -155,7 +159,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>ORDER BY()</p>
+                <p class="definition">ORDER BY()</p>
             </div>
             <div class="col-right">
                 <p>ORDER BY() permet d'assurer un tri en fonction des valeurs d'une colonne.</p>
@@ -166,10 +170,10 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>ALIAS</p>
+                <p class="definition">ALIAS</p>
             </div>
             <div class="col-right">
-                <p>un alias est un nom alternatif utilisé pour un élément de la base de données.</p>
+                <p>Un alias est un nom alternatif utilisé pour un élément de la base de données.</p>
                 <img class="illu-lexique" src="../images/alias.webp" alt="alias exemple">
             </div>
         </div>
@@ -177,7 +181,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>JOINTURE</p>
+                <p class="definition">JOINTURE</p>
             </div>
             <div class="col-right">
                 <p>Une jointure sert à relier deux tables entre elles. Pour réaliser une jointure, on utilise une valeur de donnée commune aux deux tables.
@@ -189,7 +193,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>REQUETE IMBRIQUEE</p>
+                <p class="definition">REQUETE IMBRIQUEE</p>
             </div>
             <div class="col-right">
                 <p>Une requete imbriquée, comme son nom l'indique, est une requete imbriquée dans une autre. On peut l'utiliser pour definir une condition par exemple:
@@ -198,6 +202,32 @@
                 <p>Ou encore, comme ici, pour selectionner les 3 premiers elements d'une table parmis les 4 premiers (en d'autres termes, les 3 elements qui suivent le premier):
                 </p>
                 <img class="illu-lexique" src="../images/imbrique.webp" alt="requete imbriquée exemple">
+                <p>Dans le cadre d'une condition, on utilisera '=' pour un resultat unique, et IN pour une liste de résultats.
+                </p>
+                <p>>Il ne peut y avoir qu'une colonne selectionnée dans une requete imbriquée.
+                </p>
+            </div>
+        </div>
+        <!-- Fin copier coller ligne ici -->
+        <!-- copier coller ligne ici -->
+        <div class="tabline">
+            <div class="col-left">
+                <p class="definition">TESTS DE REQUETES</p>
+            </div>
+            <div class="col-right">
+                <p>La commande 'BEGIN TRANSACTION' permet de demarrer un phase de test. Après avoir effectué la requete, il suffit d'executer 'COMMIT' pour valider la requete, 'ROLLBACK' pour l'annuler.</p>
+                <p>IMPORTANT! Il faut imperativement sortir de Test par le biais de 'COMMIT' ou 'ROLLBACK'.</p>
+            </div>
+        </div>
+        <!-- Fin copier coller ligne ici -->
+        <!-- copier coller ligne ici -->
+        <div class="tabline">
+            <div class="col-left">
+                <p class="definition">DISTINCT</p>
+            </div>
+            <div class="col-right">
+                <p>DISTINCT est une clause utilisée dans les requêtes SQL pour éliminer les enregistrements en double dans les résultats de la requête. Exemple :</p>
+                <p>L'utilisation de DISTINCT dans une fonction d'agrégation peut être utilisée pour retourner un ensemble unique de valeurs à partir des lignes de la table qui correspondent à la requête. Par exemple :</p>
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
@@ -205,5 +235,6 @@
     <footer>
         <p>The Phoenix Team, 2022</p>
     </footer>
+    <script src ="../js/script.js"></script>
 </body>
 </html>
