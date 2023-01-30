@@ -2,7 +2,8 @@
 
 
 :root{
-    --primary-color:rgb(37, 52, 121);
+    --primary-color:rgb(34, 36, 91);
+    /* Ancienne couleur header : rgb(37, 52, 121)*/
     --secondary-color:white;
     --third-color:rgb(7, 7, 7);
     --darker-color:rgb(14, 25, 63);
@@ -46,6 +47,12 @@ header{
     background-color: var(--primary-color);
     color: var(--secondary-color);
     height: 100px;
+}
+
+.logoPromo
+{
+    width: 4em;
+    height: 4em;
 }
 
 header a{
