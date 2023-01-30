@@ -4,13 +4,16 @@ var defBloc = document.getElementsByClassName('tabline');
 var main = document.getElementById('main');
 var succes = false;
 var definition = [];
+var dynamElem;
 // startResearch.addEventListener('click', research);
+
 document.addEventListener('click',checkElement);
 function checkElement(e){
     if(e.target && e.target.id == "startResearch" && document.getElementById('searchBar').value != undefined && document.getElementById('searchBar').value != "")
     {
         console.log(document.getElementById('searchBar').value);
         research();
+        document.getElementById('searchBar').value = "";
     }
     if(e.target && e.target.id == "ok")
     {
@@ -23,6 +26,10 @@ function checkElement(e){
             e.target.value = "";
         }
     }
+    // if(e.target && e.target.id == "boxValid")
+    // {
+    //     document.getElementById('boxValid').style.display = 'none';
+    // }
 }
 
 function research(){
@@ -36,12 +43,20 @@ function research(){
         if(compare == 0)
         {
             succes = true;
-            main.innerHTML += '<div class="boxValid" id="boxValid"><input class="valid-def" type="button" value="OK" id="ok"></div>';
+            dynamElem = document.createElement("div");
+            dynamElem.id = 'boxValid';
+            dynamElem.setAttribute("class","boxValid");
+            main.appendChild(dynamElem);
+            dynamInput = document.createElement('input');
+            dynamElem.appendChild(dynamInput);
+            dynamInput.setAttribute("id","ok");
+            dynamInput.setAttribute("class","valid-def");
+            dynamInput.setAttribute("type","button");
+            dynamInput.setAttribute("value","ok");
             document.getElementById('boxSearch').style.visibility = "hidden";
         }
         else
         {
-            
            defBloc[i].style.display = 'none';
         }
         
@@ -49,18 +64,31 @@ function research(){
     }
     if(succes === false)
     {
-        main.innerHTML += '<div class="boxValid" id="boxValid"><p>Désolé, la recherche n\'a retourné aucun resultat. Veuillez verifier que le mot clé est bien renseigné.</p><input class="valid-def" type="button" value="OK" id="ok"></div>';
+        dynamElem = document.createElement("div");
+        dynamElem.id = 'boxValid';
+        dynamElem.setAttribute("class","boxValid");
+        main.appendChild(dynamElem);
+        dynamInput = document.createElement('input');
+        dynamElem.appendChild(dynamInput);
+        dynamInput.setAttribute("id","ok");
+        dynamInput.setAttribute("class","valid-def");
+        dynamInput.setAttribute("type","button");
+        dynamInput.setAttribute("value","ok");
+        dynamP = document.createElement('p');
+        dynamElem.appendChild(dynamP);
+        dynamP.innerText = "Désolé, la recherche n'a retourné aucun resultat. Veuillez verifier que le mot clé est bien renseigné.";
+        // main.innerHTML += '<div class="boxValid" id="boxValid"><p></p><input class="valid-def" type="button" value="OK" id="ok"></div>';
         document.getElementById('boxSearch').style.visibility = "hidden";
     }
 };
 
 function resetDefs(){
+    dynamElem = document.getElementById('boxValid');
+    dynamElem.remove();
     for (i=0;i<def.length;i++)
-    {
-        var boxValid = document.getElementById('boxValid');
-        boxValid.style.display ='none';
+    { 
         defBloc[i].style.display = 'flex';
-        succes = false;
-        document.getElementById('boxSearch').style.visibility = "visible";
     }
+    document.getElementById('boxSearch').style.visibility = "visible";
+    succes = false;
 };

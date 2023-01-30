@@ -360,12 +360,11 @@ footer p{
 @media screen and (max-width : 400px)
 {
     header{
-        height:400px;
         align-items: center;
     }
 
     header:first-child{
-        height: 200px;
+        height: 300px;
         justify-content: center;
     }
 
@@ -398,6 +397,10 @@ footer p{
     .navbar{
         flex-direction: column;
         height: 200px;
+    }
+
+    .searchbar{
+        height: 80px;
     }
 
     footer{
