@@ -38,22 +38,11 @@ function research(){
     for (i=0;i<def.length;i++)
     {
         definition.push(document.getElementsByClassName('definition')[i].innerHTML.toUpperCase());
-        var compare = searchBarValue.localeCompare(definition[i]);
+        var compare = definition[i].startsWith(searchBarValue);
         // console.log(searchBarValue,definition[i],compare);
-        if(compare == 0)
+        if(compare === true)
         {
             succes = true;
-            dynamElem = document.createElement("div");
-            dynamElem.id = 'boxValid';
-            dynamElem.setAttribute("class","boxValid");
-            main.appendChild(dynamElem);
-            dynamInput = document.createElement('input');
-            dynamElem.appendChild(dynamInput);
-            dynamInput.setAttribute("id","ok");
-            dynamInput.setAttribute("class","valid-def");
-            dynamInput.setAttribute("type","button");
-            dynamInput.setAttribute("value","ok");
-            document.getElementById('boxSearch').style.visibility = "hidden";
         }
         else
         {
@@ -78,6 +67,20 @@ function research(){
         dynamElem.appendChild(dynamP);
         dynamP.innerText = "Désolé, la recherche n'a retourné aucun resultat. Veuillez verifier que le mot clé est bien renseigné.";
         // main.innerHTML += '<div class="boxValid" id="boxValid"><p></p><input class="valid-def" type="button" value="OK" id="ok"></div>';
+        document.getElementById('boxSearch').style.visibility = "hidden";
+    }
+    else
+    {
+        dynamElem = document.createElement("div");
+        dynamElem.id = 'boxValid';
+        dynamElem.setAttribute("class","boxValid");
+        main.appendChild(dynamElem);
+        dynamInput = document.createElement('input');
+        dynamElem.appendChild(dynamInput);
+        dynamInput.setAttribute("id","ok");
+        dynamInput.setAttribute("class","valid-def");
+        dynamInput.setAttribute("type","button");
+        dynamInput.setAttribute("value","ok");
         document.getElementById('boxSearch').style.visibility = "hidden";
     }
 };
