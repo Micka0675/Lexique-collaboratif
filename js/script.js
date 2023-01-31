@@ -1,4 +1,5 @@
 // var startResearch = document.getElementById('startResearch');
+var enter = false;
 var def = document.getElementsByClassName('definition');
 var defBloc = document.getElementsByClassName('tabline');
 var main = document.getElementById('main');
@@ -8,27 +9,32 @@ var dynamElem;
 // startResearch.addEventListener('click', research);
 
 document.addEventListener('click',checkElement);
+document.addEventListener('keypress',checkElement);
 function checkElement(e){
-    if(e.target && e.target.id == "startResearch" && document.getElementById('searchBar').value != undefined && document.getElementById('searchBar').value != "")
+    if(enter == true)
     {
-        console.log(document.getElementById('searchBar').value);
+        enter = false;
+    }
+
+    if(e.target && e.target.id == "startResearch" && document.getElementById('searchBar').value != undefined && document.getElementById('searchBar').value != "" || e.key == 'Enter' && document.getElementById('searchBar').value != undefined && document.getElementById('searchBar').value != "")
+    {
         research();
         document.getElementById('searchBar').value = "";
+        enter = true;
     }
-    if(e.target && e.target.id == "ok")
+    if(e.target && e.target.id == "ok" || e.key == 'Enter' && enter == false)
     {
         resetDefs();
     }
-    if(e.target && e.target.id == "searchBar")
-    {
-        if(e.target.value != "")
-        {
-            e.target.value = "";
-        }
-    }
-    // if(e.target && e.target.id == "boxValid")
+
+    // Pour vider la barre de recherche : (utile ?)
+
+    // if(e.target && e.target.id == "searchBar")
     // {
-    //     document.getElementById('boxValid').style.display = 'none';
+    //     if(e.target.value != "")
+    //     {
+    //         e.target.value = "";
+    //     }
     // }
 }
 
