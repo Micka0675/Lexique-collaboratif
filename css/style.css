@@ -16,6 +16,13 @@
     text-decoration: none;
     list-style: none;
 }
+
+body::-webkit-scrollbar 
+{
+    width: 0px;
+    background: transparent;
+}
+
 body{
     background-color: var(--third-color);
 }
