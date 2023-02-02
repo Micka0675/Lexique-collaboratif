@@ -8,166 +8,245 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Phoenix Lexique</title>
 </head>
 <body>
     <header>
-        <a href="../index.html"><h1>Lexique Collaboratif Formation CDA</h1></a>
+        <a href="../index.html">
+            <img src="../images/phoenixml.jpg" alt="Logo PhoeniXML" class="logoPromo">
+            <h1>Lexique Collaboratif Formation CDA</h1>
+            <img src="../images/phoenixml.jpg" alt="Logo PhoeniXML" class="logoPromo">
+        </a>
         <div class="navbar">
             <a href="../pages/analyse.html">Analyse & Conception</a>
             <a href="../pages/algo.html">Algorithmie</a>
-            <a href="../pages/sql.html">Sql</a>
+            <a href="../pages/sql.html">T-Sql</a>
+            <a href="../pages/annexes.html">Annexes</a>
+            <a href="../pages/suggestions.html">Suggestions</a>
+        </div>
+        <div class="searchbar" id="boxSearch">
+            <input type="text" placeholder="Rechercher une definition" id="searchBar"><i class="fa-sharp fa-solid fa-magnifying-glass" id="startResearch"></i>
         </div>
     </header>
-    <div class="main">
-        <div class="category"><h2>Analyse & Conception de données</h2></div>
+    <div class="main" id="main">
+        <div class="category"><h2>Transact-SQl</h2></div>
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Dictionnaire de données</p>
+                <p class="definition">SQL</p>
             </div>
             <div class="col-right">
-                <p>Un dictionnaire de données permet de répertorier l'ensemble des informations concernant l'application.</p>
+                <p>SQL (sigle de Structured Query Language, en français langage de requête structurée) est un langage informatique normalisé servant à exploiter des bases de données relationnelles. La partie langage de manipulation des données de SQL permet de rechercher, d'ajouter, de modifier ou de supprimer des données dans les bases de données relationnelles.</p>
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Modèle Conceptuel de données (MCD)</p>
+                <p class="definition">CRUD</p>
             </div>
             <div class="col-right">
-                <p>C'est une représentation de l'ensemble des informations ordonnées et mises en relation entre elles.</p>
+                <p>CRUD (create, read, update, delete) (créer, lire, mettre à jour, supprimer) est un acronyme pour les façons dont on peut fonctionner sur des données stockées. C'est un moyen mnémotechnique pour les quatre fonctions de base du stockage persistant.</p>
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Modèle Physique de données (MPD)</p>
+                <p class="definition">REQUETE</p>
             </div>
             <div class="col-right">
-                <p>C'est une representation de l'ensemble des informations ordonnées et mises en relation entre elles dans le but de pouvoir les stocker.</p>
+                <p>Une requete est une instruction qui permet de gérer les données de la base de données.</p>
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Cardinalités</p>
+                <p class="definition">STRUCTURE DE REQUETE</p>
             </div>
             <div class="col-right">
-                <p>Les cardinalités permettent de définir quels types de relation relient les entités. Une cardinalité est symbolisée par deux particules, une déterminant le minimum, l'autre le maximum :</p>
-                <p>Les valeurs des cardinalités sont :</p>
-                <p>Pour la particule gauche :</p>
+                <p>Une requete se structure dans un ordre précis:</p>
                 <ul>
-                    <li>Il peut ne pas en avoir (0)</li>
-                    <li>Il doit y en avoir au moins un (1)</li>
+                    <li>COMMANDE</li>
+                    <li>JOINTURE</li>
+                    <li>CONDITION</li>
+                    <li>GROUPEMENT</li>
+                    <li>TRI</li>
                 </ul>
-                <p>Pour la particule droite :</p>
-                <ul>
-                    <li>Il y en a un maximum (1)</li>
-                    <li>Il peut y en avoir plusieurs (n)</li>
-                </ul>
-            </div>
-        </div>
-        <!-- Fin copier coller ligne ici -->
-        <div class="tabline">
-            <div class="col-left">
-                <p>Entité</p>
-            </div>
-            <div class="col-right">
-                <p>Regroupement d'informations qui composent et caractérisent l'entité. Ses informations sont nommés attributs/champs</p>
-            </div>
-        </div>
-        <!-- ----------------------------------------------------------------------------- -->
-         <!-- copier coller ligne ici -->
-         <div class="tabline">
-            <div class="col-left">
-                <p>Entité d'association</p>
-            </div>
-            <div class="col-right">
-                <p>Une entité d'association est une entité issue d'une relation de type 'many to many' ou n-n. Elle héritera donc de toutes les références uniques des tables reliées et l'ensemble de ces clés constitueront une clé primaire.</p>
+                <img class="illu-lexique" src="../images/structure.webp" alt="structure exemple">
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Relation</p>
+                <p class="definition">CREATE</p>
             </div>
             <div class="col-right">
-                <p>Une relation établit un lien entre une ou plusieurs entités. Elle peut être caractérisée par un verbe d'état et/ou d'un ou plusieurs attributs.</p>
+                <p>CREATE est la commande qui permet de creer des elements de structure de base de données comme des tables ou des bases de données.</p>
+                <img class="illu-lexique" src="../images/create.webp" alt="create exemple">
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Relations ou Entités?</p>
+                <p class="definition">SELECT</p>
             </div>
             <div class="col-right">
-                <p>Dans la conception du MCD, il arrive de se demander si un élément doit être matérialisé en une relation ou une entité. En l'absence de clé unique qui définit l'entité, le choix doit être porté vers une relation. Le cas contraire, on choisira une entité.</p>
+                <p>SELECT (READ) est la commande qui permet d'afficher des données dans une base de données.</p>
+                <img class="illu-lexique" src="../images/select.webp" alt="select exemple">
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Relation réflexible</p>
+                <p class="definition">UPDATE</p>
             </div>
             <div class="col-right">
-                <p>Une relation réflexive est une relation entre une entité et elle-même. Elle s'applique en s'appuyant sur un principe de boucle ou itération.</p>
-            </div>
-        </div>
-        <!-- Fin copier coller ligne ici -->
-        <div class="tabline">
-            <div class="col-left">
-                <p>Attributs </p>
-            </div>
-            <div class="col-right">
-                <p>Les attributs sont indivisibles, typés, soumis à des contraintes et à des règles de calcul.</p>
-                <p>Ils comportent un code et une description.</p>
-            </div>
-        </div>
-        <!-- ----------------------------------------------------------------------------- -->
-        <!-- copier coller ligne ici -->
-        <div class="tabline">
-            <div class="col-left">
-                <p>Clé Primaire</p>
-            </div>
-            <div class="col-right">
-                <p>Une clé primaire est la donnée qui permet d'identifier de manière unique un enregistrement dans une entité.</p>
+                <p>UPDATE est la commande qui permet de modifier des données dans une base de données.</p>
+                <img class="illu-lexique" src="../images/update.webp" alt="update exemple">
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Clé Étrangère</p>
+                <p class="definition">DELETE</p>
             </div>
             <div class="col-right">
-                <p>Une clé étrangère, dans une base de données relationnelle, est une contrainte qui garantit l'intégrité référentielle entre deux tables. Elle établit le lien entre deux tables en étant liée à la clé primaire d'une autre table.</p>
-            </div>
-        </div>
-        <!-- Fin copier coller ligne ici -->
-         <!-- copier coller ligne ici -->
-         <div class="tabline">
-            <div class="col-left">
-                <p>TEST</p>
-            </div>
-            <div class="col-right">
-                <p>TEST</p>
+                <p>DELETE est la commande qui permet de supprimer des données dans une base de données.</p>
+                <img class="illu-lexique" src="../images/delete.webp" alt="delete exemple">
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Notions de NULL/VIDE</p>
+                <p class="definition">FONCTION D'AGREGATION</p>
             </div>
             <div class="col-right">
-                <p>La notion de NULL = Abscence d'information et la notion de VIDE = l'information n'est pas communiquée</p>
+                <p>Une fonction d'agrégation est une operation dans une requete permettant de calculer un resultat sur les données d'une colonne en fonction de parametres definis.
+                    Il en existe plusieurs, comme SUM() (calcul de somme), AVG() (calcul de moyennes), COUNT() (calcule le nombre de lignes).
+                </p>
+                <img class="illu-lexique" src="../images/sum.webp" alt="somme exemple">
+            </div>
+        </div>
+        <!-- Fin copier coller ligne ici -->
+        <!-- copier coller ligne ici -->
+        <div class="tabline">
+            <div class="col-left">
+                <p class="definition">CONDITION (WHERE)</p>
+            </div>
+            <div class="col-right">
+                <p>La condition est utilisée pour filtrer les resultats de requete. Dans cet exemple elle permet de selectionner des informations relatives a un vehicule en fonction de sa plaque d'immatriculation.
+                </p>
+                <img class="illu-lexique" src="../images/where.webp" alt="condition exemple">
+            </div>
+        </div>
+        <!-- Fin copier coller ligne ici -->
+        <!-- copier coller ligne ici -->
+        <div class="tabline">
+            <div class="col-left">
+                <p class="definition">GROUP BY()</p>
+            </div>
+            <div class="col-right">
+                <p>Pour repertorier les resultats d'une colonne en fonction d'une autre, il faut utiliser GROUP BY().
+                    Par exemple, ici, on souhaite connaitre le nombre d'immeubles enregistrés par quartier:
+                </p>
+                <img class="illu-lexique" src="../images/group.webp" alt="groupement exemple">
+            </div>
+        </div>
+        <!-- Fin copier coller ligne ici -->
+        <!-- copier coller ligne ici -->
+        <div class="tabline">
+            <div class="col-left">
+                <p class="definition">ORDER BY()</p>
+            </div>
+            <div class="col-right">
+                <p>ORDER BY() permet d'assurer un tri en fonction des valeurs d'une colonne.</p>
+                <img class="illu-lexique" src="../images/order.webp" alt="tri exemple">
+            </div>
+        </div>
+        <!-- Fin copier coller ligne ici -->
+        <!-- copier coller ligne ici -->
+        <div class="tabline">
+            <div class="col-left">
+                <p class="definition">ALIAS</p>
+            </div>
+            <div class="col-right">
+                <p>Un alias est un nom alternatif utilisé pour un élément de la base de données.</p>
+                <img class="illu-lexique" src="../images/alias.webp" alt="alias exemple">
+            </div>
+        </div>
+        <!-- Fin copier coller ligne ici -->
+        <!-- copier coller ligne ici -->
+        <div class="tabline">
+            <div class="col-left">
+                <p class="definition">JOINTURE</p>
+            </div>
+            <div class="col-right">
+                <p>Une jointure sert à relier deux tables entre elles. Pour réaliser une jointure, on utilise une valeur de donnée commune aux deux tables.
+                </p>
+                <img class="illu-lexique" src="../images/join.webp" alt="Jointure exemple">
+            </div>
+        </div>
+        <!-- Fin copier coller ligne ici -->
+        <!-- copier coller ligne ici -->
+        <div class="tabline">
+            <div class="col-left">
+                <p class="definition">REQUETE IMBRIQUEE</p>
+            </div>
+            <div class="col-right">
+                <p>Une requete imbriquée, comme son nom l'indique, est une requete imbriquée dans une autre. On peut l'utiliser pour definir une condition par exemple:
+                </p>
+                <img class="illu-lexique" src="../images/imbrique-condition.webp" alt="requete imbriquée exemple">
+                <p>Ou encore, comme ici, pour selectionner les 3 premiers elements d'une table parmis les 4 premiers (en d'autres termes, les 3 elements qui suivent le premier):
+                </p>
+                <img class="illu-lexique" src="../images/imbrique.webp" alt="requete imbriquée exemple">
+                <p>Dans le cadre d'une condition, on utilisera '=' pour un resultat unique, et IN pour une liste de résultats.
+                </p>
+                <p>>Il ne peut y avoir qu'une colonne selectionnée dans une requete imbriquée.
+                </p>
+            </div>
+        </div>
+        <!-- Fin copier coller ligne ici -->
+        <!-- copier coller ligne ici -->
+        <div class="tabline">
+            <div class="col-left">
+                <p class="definition">UNION</p>
+            </div>
+            <div class="col-right">
+                <p>La commande UNION permet de combiner les résultats de deux ou plusieurs requêtes SELECT distinctes pour retourner un ensemble de résultat unique.
+                    Elle enlève les doublons des résultatas combinés.
+                </p>
+                <img class="illu-lexique" src="../images/union.webp" alt="union exemple">
+            </div>
+        </div>
+        <!-- Fin copier coller ligne ici -->
+        <!-- copier coller ligne ici -->
+        <div class="tabline">
+            <div class="col-left">
+                <p class="definition">TESTS DE REQUETES</p>
+            </div>
+            <div class="col-right">
+                <p>La commande 'BEGIN TRANSACTION' permet de demarrer un phase de test. Après avoir effectué la requete, il suffit d'executer 'COMMIT' pour valider la requete, 'ROLLBACK' pour l'annuler.</p>
+                <p><i class="fa-solid fa-triangle-exclamation"></i> Il faut IMPERATIVEMENT sortir de Test par le biais de 'COMMIT' ou 'ROLLBACK' car la BDD est hors d'usage pour tout autre utilisateur durant cette phase de test.<i class="fa-solid fa-triangle-exclamation"></i></p>
+            </div>
+        </div>
+        <!-- Fin copier coller ligne ici -->
+        <!-- copier coller ligne ici -->
+        <div class="tabline">
+            <div class="col-left">
+                <p class="definition">DISTINCT</p>
+            </div>
+            <div class="col-right">
+                <p>DISTINCT est une clause utilisée dans les requêtes SQL pour éliminer les enregistrements en double dans les résultats de la requête. Exemple :</p>
+                <p>L'utilisation de DISTINCT dans une fonction d'agrégation peut être utilisée pour retourner un ensemble unique de valeurs à partir des lignes de la table qui correspondent à la requête. Par exemple :</p>
+                <img class="illu-lexique" src="../images/distinct.webp" alt="distinct exemple">
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
@@ -185,5 +264,6 @@
     <footer>
         <p>The Phoenix Team, 2022</p>
     </footer>
+    <script src ="../js/script.js"></script>
 </body>
 </html>

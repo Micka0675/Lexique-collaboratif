@@ -8,53 +8,69 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Phoenix Lexique</title>
 </head>
 <body>
     <header>
-        <a href="../index.html"><h1>Lexique Collaboratif Formation CDA</h1></a>
+        <a href="../index.html">
+            <img src="../images/phoenixml.jpg" alt="Logo PhoeniXML" class="logoPromo">
+            <h1>Lexique Collaboratif Formation CDA</h1>
+            <img src="../images/phoenixml.jpg" alt="Logo PhoeniXML" class="logoPromo">
+        </a>
         <div class="navbar">
             <a href="../pages/analyse.html">Analyse & Conception</a>
             <a href="../pages/algo.html">Algorithmie</a>
-            <a href="../pages/sql.html">Sql</a>
+            <a href="../pages/sql.html">T-Sql</a>
+            <a href="../pages/annexes.html">Annexes</a>
+            <a href="../pages/suggestions.html">Suggestions</a>
+        </div>
+        <div class="searchbar" id="boxSearch">
+            <input type="text" placeholder="Rechercher une definition" id="searchBar"><i class="fa-sharp fa-solid fa-magnifying-glass" id="startResearch"></i>
         </div>
     </header>
-    <div class="main">
+    <div class="main" id="main">
         <div class="category"><h2>Analyse & Conception de données</h2></div>
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Dictionnaire de données</p>
+                <p class="definition">Dictionnaire de données</p>
             </div>
             <div class="col-right">
-                <p>Un dictionnaire de données permet de répertorier l'ensemble des informations concernant l'application.</p>
+                <p>Un dictionnaire de données permet de répertorier les informations constituant l'application en données indivisibles. Ces dernières sont nommées, décrites, typées et regroupées en entités. Y figurent également les contraintes et certaines règles de calcul.</p>
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Modèle Conceptuel de données (MCD)</p>
+                <p class="definition">Modèle Conceptuel de données (MCD)</p>
             </div>
             <div class="col-right">
-                <p>C'est une représentation de l'ensemble des informations ordonnées et mises en relation entre elles.</p>
+                <p>Le MCD est un schéma représentant l'ensemble des données ordonnées en entité constituée d'attributs, caractérisée par une référence unique et mise en relation avec les autres entités. Ces relations peuvent s'illustrer par des verbes, voire des attributs et se lisent par le biais de cardinalités.</p>
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Modèle Physique de données (MPD)</p>
+                <p class="definition">Modèle Physique de données (MPD)</p>
             </div>
             <div class="col-right">
-                <p>C'est une representation de l'ensemble des informations ordonnées et mises en relation entre elles dans le but de pouvoir les stocker.</p>
+                <p>Le MPD est le schéma résultant du MCD suite à l'application des règles suivantes : 
+                    <ul>
+                        <li>Les références uniques se transforment en clés primaires et d'autres contraintes telles que la nullabilité et l'auto-incrément peuvent y figurer.</li>
+                        <li>Pour les relations <strong>many to one</strong>, la clé primaire de l'entité forte (many) est reportée dans l'entité faible (one) sous forme de clé étrangère. Les attributs de la relation se reportent également dans l'entité faible.</li>
+                        <li>Les relations <strong>many to many</strong>, se traduisent par la création d'une table d'association. Sa clé primaire est la concaténation des clés étrangères la reliant aux entités d'origines. Elle reprend les attributs de la relation.</li>
+                    </ul>
+                </p>
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Cardinalités</p>
+                <p class="definition">Cardinalités</p>
             </div>
             <div class="col-right">
                 <p>Les cardinalités permettent de définir quels types de relation relient les entités. Une cardinalité est symbolisée par deux particules, une déterminant le minimum, l'autre le maximum :</p>
@@ -74,17 +90,17 @@
         <!-- Fin copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Entité</p>
+                <p class="definition">Entité</p>
             </div>
             <div class="col-right">
-                <p>Regroupement d'informations qui composent et caractérisent l'entité. Ses informations sont nommés attributs/champs</p>
+                <p>Regroupement d'informations qui composent et caractérisent l'entité. Ses informations sont nommés attributs/champs.</p>
             </div>
         </div>
         <!-- ----------------------------------------------------------------------------- -->
          <!-- copier coller ligne ici -->
          <div class="tabline">
             <div class="col-left">
-                <p>Entité d'association</p>
+                <p class="definition">Entité d'association</p>
             </div>
             <div class="col-right">
                 <p>Une entité d'association est une entité issue d'une relation de type 'many to many' ou n-n. Elle héritera donc de toutes les références uniques des tables reliées et l'ensemble de ces clés constitueront une clé primaire.</p>
@@ -94,7 +110,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Relation</p>
+                <p class="definition">Relation</p>
             </div>
             <div class="col-right">
                 <p>Une relation établit un lien entre une ou plusieurs entités. Elle peut être caractérisée par un verbe d'état et/ou d'un ou plusieurs attributs.</p>
@@ -104,7 +120,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Relations ou Entités?</p>
+                <p class="definition">Relations ou Entités?</p>
             </div>
             <div class="col-right">
                 <p>Dans la conception du MCD, il arrive de se demander si un élément doit être matérialisé en une relation ou une entité. En l'absence de clé unique qui définit l'entité, le choix doit être porté vers une relation. Le cas contraire, on choisira une entité.</p>
@@ -114,16 +130,20 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Relation réflexible</p>
+                <p class="definition">Relation réflexive</p>
             </div>
             <div class="col-right">
-                <p>Une relation réflexive est une relation entre une entité et elle-même. Elle s'applique en s'appuyant sur un principe de boucle ou itération.</p>
+                <p>Dans une relation reflexive, une entité est mise en relation avec elle-même. Cette entité est caractérisée par deux clés étrangères relatives à l'entité d'origine ainsi qu'à l'entité issue de la relation reflexive.</p>
+                <p><img src="../images/paxe.jpg" alt="reflexive" class="illu-lexique"></p>
+                <p>Par exemple, pour une entité <strong>Individu</strong>, une deuxième entité relative au conjoint peut être distinguée. Cette dernière est un élément d'<strong>Individu</strong> qui est mis en relation avec une autre élément d'<strong>Individu</strong>.</p>
+                <p><strong>HNum</strong> serait la clé étrangère de l'entité <strong>Individu</strong> et <strong>ConjointNum</strong>, la clé étrangère de l'entité <strong>Conjoint</strong>.</p>
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
+        <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Attributs </p>
+                <p class="definition">Attributs </p>
             </div>
             <div class="col-right">
                 <p>Les attributs sont indivisibles, typés, soumis à des contraintes et à des règles de calcul.</p>
@@ -134,7 +154,7 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Clé Primaire</p>
+                <p class="definition">Clé Primaire</p>
             </div>
             <div class="col-right">
                 <p>Une clé primaire est la donnée qui permet d'identifier de manière unique un enregistrement dans une entité.</p>
@@ -144,20 +164,10 @@
         <!-- copier coller ligne ici -->
         <div class="tabline">
             <div class="col-left">
-                <p>Clé Étrangère</p>
+                <p class="definition">Clé Étrangère</p>
             </div>
             <div class="col-right">
                 <p>Une clé étrangère, dans une base de données relationnelle, est une contrainte qui garantit l'intégrité référentielle entre deux tables. Elle établit le lien entre deux tables en étant liée à la clé primaire d'une autre table.</p>
-            </div>
-        </div>
-        <!-- Fin copier coller ligne ici -->
-        <!-- copier coller ligne ici -->
-        <div class="tabline">
-            <div class="col-left">
-                <p>Update</p>
-            </div>
-            <div class="col-right">
-                <p>Update nom_table SET nom_colonne = valeur</p>
             </div>
         </div>
         <!-- Fin copier coller ligne ici -->
@@ -165,5 +175,6 @@
     <footer>
         <p>The Phoenix Team, 2022</p>
     </footer>
+    <script src ="../js/script.js"></script>
 </body>
 </html>
