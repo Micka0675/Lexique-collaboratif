@@ -364,18 +364,6 @@ footer p{
 }
 
 
-body {font-family: Arial, Helvetica, sans-serif;}
-
-/* .illu-lexique {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-  width:  300px;
-    height: 200px;
-    object-fit: cover;
-  
-} */
-
 .illu-lexique:hover {opacity: 0.7;}
 
 .modal {
@@ -383,7 +371,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   position: fixed; 
   z-index: 1; 
   padding-top: 10px; 
-  left: 0;
+  left: 50;
   top: 0;
   width: 100%; 
   height: 100%; 
@@ -394,10 +382,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 
 .modal-content {
-  margin: auto auto;
+  margin: 250px auto 0;
   display: block;
-  width: 70%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 900px;
 }
 
 
@@ -409,7 +397,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   text-align: center;
   color: #ccc;
   padding: 10px 0;
-  height: 150px;
+  height: 150px;text-transform: capitalize;
 }
 
 
@@ -436,10 +424,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
   top: 15px;
   right: 35px;
   color: #f1f1f1;
-  font-size: 40px;
+  font-size: 46px;
   font-weight: bold;
   transition: 0.3s;
-  z-index=999;
+  z-index:999;
 }
 
 .close:hover,
@@ -449,13 +437,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
   cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
   .modal-content {
     width: 100%;
   }
 }
-
 
 
 
