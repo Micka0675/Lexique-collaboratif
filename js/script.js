@@ -6,6 +6,11 @@ var main = document.getElementById('main');
 var succes = false;
 var definition = [];
 var dynamElem;
+var modal = document.getElementsByClassName("modal")[0];
+var img = document.getElementsByClassName('illu-lexique');
+var modalImg = document.getElementsByClassName("modal-content")[0];
+var captionText = document.getElementsByClassName("caption")[0];
+var span = document.getElementsByClassName("close")[0];
 
 // evenements au clic et a la pression d'une touche sur tout le document
 document.addEventListener('click',checkElement);
@@ -102,3 +107,20 @@ function resetDefs(){
     document.getElementById('boxSearch').style.visibility = "visible";
     succes = false;
 };
+
+// fonction permettant de consulter les images au clic
+function picture_box(){
+    modal.style.visibility = "visible";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+   
+};
+function box_appear(){ 
+    modal.style.visibility = "hidden";
+};
+
+for(i=0;i<img.length;i++){
+    img[i].addEventListener('click', picture_box);
+};
+
+span.addEventListener('click', box_appear);
