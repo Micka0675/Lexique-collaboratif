@@ -366,18 +366,6 @@ footer p{
 }
 
 
-body {font-family: Arial, Helvetica, sans-serif;}
-
-/* .illu-lexique {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-  width:  300px;
-    height: 200px;
-    object-fit: cover;
-  
-} */
-
 .illu-lexique:hover {opacity: 0.7;}
 
 .modal {
