@@ -384,7 +384,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   visibility: hidden;
   position: fixed; 
   z-index: 1; 
-  padding-top: 10px; 
+  padding-top: 20%; 
   left: 0;
   top: 0;
   width: 100%; 
@@ -451,18 +451,15 @@ body {font-family: Arial, Helvetica, sans-serif;}
   cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
-}
-
-
 
 
 /* media queries  */
 
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
 
 @media screen and (max-width:900px)
 {
