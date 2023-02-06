@@ -58,6 +58,7 @@ function research(){
     {
         // on ajoute l'element dans un tableau
         definition.push(document.getElementsByClassName('definition')[i].innerHTML.toUpperCase());
+     
         // comparaison des valeurs avec startWith() qui renvoie un booleen
         var compare = definition[i].startsWith(searchBarValue);
         if(compare === true)
@@ -68,7 +69,7 @@ function research(){
         {
            defBloc[i].style.display = 'none';
         }
-        
+        console.log(definition[i]);
         
     }
     if(succes === false)
@@ -104,6 +105,7 @@ function research(){
         dynamInput.setAttribute("value","ok");
         document.getElementById('boxSearch').style.visibility = "hidden";
     }
+  
 };
 
 // fonction de reset des definitions

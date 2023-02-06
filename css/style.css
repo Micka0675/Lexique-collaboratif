@@ -402,7 +402,7 @@ footer p{
   visibility: hidden;
   position: fixed; 
   z-index: 1; 
-  padding-top: 20%; 
+  padding-top: 10%; 
   left: 0;
   top: 0;
   width: 100%; 
@@ -414,10 +414,10 @@ footer p{
 
 
 .modal-content {
-  margin: auto auto;
+  margin: 250px auto 0;
   display: block;
-  width: 70%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 900px;
 }
 
 
@@ -469,7 +469,6 @@ footer p{
   text-decoration: none;
   cursor: pointer;
 }
-
 
 
 /* media queries  */
