@@ -13,19 +13,25 @@
 </head>
 <body>
     <header>
-        <a href="../index.html">
+        <a href="../index.html" id="entete" class="titre">
             <img src="../images/phoenixml.jpg" alt="Logo PhoeniXML" class="logoPromo">
             <h1>Lexique Collaboratif Formation CDA</h1>
             <img src="../images/phoenixml.jpg" alt="Logo PhoeniXML" class="logoPromo">
         </a>
-        <div class="navbar">
-            <a href="../pages/analyse.html">Analyse & Conception</a>
-            <a href="../pages/algo.html">Algorithmie</a>
-            <a href="../pages/sql.html">T-Sql</a>
-            <a href="../pages/annexes.html">Annexes</a>
-            <a href="../pages/suggestions.html">Suggestions</a>
+        <div class="navbar" id="navBar">
+            <div class="links">
+                <a href="../pages/analyse.html">Analyse & Conception</a>
+                <a href="../pages/algo.html">Algorithmie</a>
+                <a href="../pages/sql.html">T-Sql</a>
+                <a href="../pages/annexes.html">Annexes</a>
+                <a href="../pages/suggestions.html">Suggestions</a>
+            </div>
+            <div class="searchbar" id="boxSearch">
+                <input type="text" placeholder="Rechercher une definition" id="searchBar"><i class="fa-sharp fa-solid fa-magnifying-glass" id="startResearch"></i>
+            </div>
         </div>
     </header>
+    <div class="bg-header"></div>
     <div class="mainAnnexe">
         <h2>Documents récapitulatifs SQL - CRUD avec exemple d'application</h2>
         <a target="_blank" href="../annexes/Dictionnaire de Données - Notation de Films - Feuille 1.pdf">Dictionnaire de Données - Notation de Films<i class="fa-solid fa-file-pdf"></i></a>
@@ -43,7 +49,7 @@
 
         <h2>T-SQL</h2>
         <div class="modal">
-            <span class="close">&times;</span>
+            <span class="close" id="close">&times;</span>
             <img class="modal-content" id="modal-content">
             <div class="caption"></div>
           </div>

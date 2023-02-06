@@ -11,10 +11,20 @@ var img = document.getElementsByClassName('illu-lexique');
 var modalImg = document.getElementsByClassName("modal-content")[0];
 var captionText = document.getElementsByClassName("caption")[0];
 var span = document.getElementsByClassName("close")[0];
+var navBar = document.getElementById('navBar');
+
 
 // evenements au clic et a la pression d'une touche sur tout le document
 document.addEventListener('click',checkElement);
 document.addEventListener('keypress',checkElement);
+document.addEventListener('click', function(e)
+{
+    if(e.target && e.target.id == 'close')
+    {
+        modal.style.visibility = "hidden";
+    }
+});
+document.addEventListener('scroll', stickyNavbar);
 
 // fonction qui determine quelle zone a été cliquée ou a quelle etape la touche 'entree' a été pressée 
 // avec redirection en consequence
@@ -115,12 +125,20 @@ function picture_box(){
     captionText.innerHTML = this.alt;
    
 };
-function box_appear(){ 
-    modal.style.visibility = "hidden";
-};
 
 for(i=0;i<img.length;i++){
     img[i].addEventListener('click', picture_box);
 };
 
-span.addEventListener('click', box_appear);
+function stickyNavbar()
+{
+    if(window.pageYOffset == 0)
+    {
+        navBar.style.transform = 'translateY(0px)';
+    }
+    else
+    {
+        navBar.style.transform = 'translateY(-100px)';
+    }
+};
+

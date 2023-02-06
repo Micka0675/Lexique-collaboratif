@@ -12,19 +12,25 @@
 </head>
 <body>
     <header>
-        <a href="./index.html">
-            <img src="./images/phoenixml.jpg" alt="Logo PhoeniXML" class="logoPromo">
+        <a href="../index.html" id="entete" class="titre">
+            <img src="../images/phoenixml.jpg" alt="Logo PhoeniXML" class="logoPromo">
             <h1>Lexique Collaboratif Formation CDA</h1>
-            <img src="./images/phoenixml.jpg" alt="Logo PhoeniXML" class="logoPromo">
+            <img src="../images/phoenixml.jpg" alt="Logo PhoeniXML" class="logoPromo">
         </a>
-        <div class="navbar">
-            <a href="./pages/analyse.html">Analyse & Conception</a>
-            <a href="./pages/algo.html">Algorithmie</a>
-            <a href="./pages/sql.html">T-Sql</a>
-            <a href="./pages/annexes.html">Annexes</a>
-            <a href="./pages/suggestions.html">Suggestions</a>
+        <div class="navbar" id="navBar">
+            <div class="links">
+                <a href="../pages/analyse.html">Analyse & Conception</a>
+                <a href="../pages/algo.html">Algorithmie</a>
+                <a href="../pages/sql.html">T-Sql</a>
+                <a href="../pages/annexes.html">Annexes</a>
+                <a href="../pages/suggestions.html">Suggestions</a>
+            </div>
+            <div class="searchbar" id="boxSearch">
+                <input type="text" placeholder="Rechercher une definition" id="searchBar"><i class="fa-sharp fa-solid fa-magnifying-glass" id="startResearch"></i>
+            </div>
         </div>
     </header>
+    <div class="bg-header"></div>
     <div class="mainIndex">
         <p class="welcome each-modif2">Bienvenue dans le Lexique Collaboratif de PhoeniXML! Ce lexique a pour objectif de référencer les informations importantes qui concernent la formation Concepteur Developpeur d'Applications (CDA).</p>
         <h2>Comment contribuer au projet?</h2>
@@ -47,5 +53,6 @@
     <footer>
         <p>The Phoenix Team, 2022</p>
     </footer>
+    <script src ="../js/script.js"></script>
 </body>
 </html>
