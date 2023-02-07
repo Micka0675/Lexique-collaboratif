@@ -70,9 +70,25 @@ header{
     height: 200px;
 }
 
-/* .fa-arrow-down-to-line{
+.arrow-bloc{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
 
-} */
+.arrow-moves{
+    animation: arrowMoves 2s infinite;
+    animation-delay: 3s;
+}
+
+.arrow-up{
+    font-size: 25px;
+    color: var(wheat);
+}
 
 .logoPromo
 {
@@ -446,15 +462,7 @@ footer p{
   animation-duration: 0.6s;
 }
 
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
-}
 
-@keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
-}
 
 /* The Close Button */
 .close {
@@ -575,4 +583,20 @@ footer p{
         height: calc(100vh - 70vh - 400px);
         background-color: var(--primary-color);
     }
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+@keyframes arrowMoves{
+    0%{opacity: 0;transform:translateY(0px);}
+    50%{transform:translateY(20px);opacity: 1;}
+    100%{transform:translateY(0px);opacity: 0;}
 }

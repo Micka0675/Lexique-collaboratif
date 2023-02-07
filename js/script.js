@@ -12,9 +12,9 @@ var modalImg = document.getElementsByClassName("modal-content")[0];
 var captionText = document.getElementsByClassName("caption")[0];
 var span = document.getElementsByClassName("close")[0];
 var navBar = document.getElementById('navBar');
+var arrowBloc = document.getElementById('arrowBloc');
 activeCursor = false;
 
-console.log(window.pageYOffset);
 // evenements au clic et a la pression d'une touche sur tout le document
 document.addEventListener('click',checkElement);
 document.addEventListener('mousemove',whereIsCursor);
@@ -71,7 +71,6 @@ function research(){
         {
            defBloc[i].style.display = 'none';
         }
-        console.log(definition[i]);
         
     }
     if(succes === false)
@@ -136,11 +135,11 @@ for(i=0;i<img.length;i++){
 
 function stickyNavbar()
 {
-    console.log(window.pageYOffset);
     if(window.pageYOffset == 0)
     {
         navBar.style.transform = 'translateY(0px)';
         activeCursor = false;
+        arrowBloc.classList.remove('arrow-moves');
     }
     else
     {
@@ -148,6 +147,7 @@ function stickyNavbar()
         {
             navBar.style.transform = 'translateY(-300px)';
             activeCursor = true;
+            arrowBloc.classList.add('arrow-moves');
         }
         
     }
@@ -158,12 +158,14 @@ function whereIsCursor(e){
     if(e.clientY < 300 && activeCursor === true)
     {
         navBar.style.transform = 'translateY(0px)';
+        arrowBloc.classList.remove('arrow-moves');
 
     }
     else
     {
         if(e.clientY > 300 && activeCursor === true)
         navBar.style.transform = 'translateY(-300px)';
+        arrowBloc.classList.add('arrow-moves');
     }
     
 }
