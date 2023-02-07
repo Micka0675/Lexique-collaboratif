@@ -554,9 +554,18 @@ footer p{
 
     }
 
-    .searchbar{
-        height: 80px;
+    .links{
+        flex-direction: column;
     }
+
+    .links a{
+        margin-top: 5px;
+    }
+
+    .searchbar{
+        height: 25px;
+    }
+    
 
     footer{
         height: calc(100vh - 70vh - 400px);
