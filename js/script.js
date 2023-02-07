@@ -12,10 +12,12 @@ var modalImg = document.getElementsByClassName("modal-content")[0];
 var captionText = document.getElementsByClassName("caption")[0];
 var span = document.getElementsByClassName("close")[0];
 var navBar = document.getElementById('navBar');
+activeCursor = false;
 
-
+console.log(window.pageYOffset);
 // evenements au clic et a la pression d'une touche sur tout le document
 document.addEventListener('click',checkElement);
+document.addEventListener('mousemove',whereIsCursor);
 document.addEventListener('keypress',checkElement);
 document.addEventListener('click', function(e)
 {
@@ -134,13 +136,35 @@ for(i=0;i<img.length;i++){
 
 function stickyNavbar()
 {
+    console.log(window.pageYOffset);
     if(window.pageYOffset == 0)
     {
         navBar.style.transform = 'translateY(0px)';
+        activeCursor = false;
     }
     else
     {
-        navBar.style.transform = 'translateY(-100px)';
+        if(window.pageYOffset > 200)
+        {
+            navBar.style.transform = 'translateY(-300px)';
+            activeCursor = true;
+        }
+        
     }
+    return activeCursor;
 };
+
+function whereIsCursor(e){
+    if(e.clientY < 300 && activeCursor === true)
+    {
+        navBar.style.transform = 'translateY(0px)';
+
+    }
+    else
+    {
+        if(e.clientY > 300 && activeCursor === true)
+        navBar.style.transform = 'translateY(-300px)';
+    }
+    
+}
 
