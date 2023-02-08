@@ -470,7 +470,6 @@ footer p{
 }
 
 
-
 /* The Close Button */
 .close {
   position: absolute;
@@ -488,6 +487,10 @@ footer p{
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
 }
 
 
