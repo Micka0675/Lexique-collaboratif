@@ -396,6 +396,10 @@ footer p{
     width: 25%;
 }
 
+.definition{
+    text-transform: uppercase;
+}
+
 .col-right{
     position: relative;
     overflow-y: visible;
@@ -421,6 +425,8 @@ footer p{
 .illu-lexique{
     width: 450px;
     margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
 }
 
 
